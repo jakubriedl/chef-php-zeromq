@@ -13,7 +13,7 @@ bash 'make & install zeromq' do
   EOF
 end
 
-node['php-zeromq']['conf_dirs'].each do |conf_dir|
+node['php']['conf_dirs'].each do |conf_dir|
 	file "#{conf_dir}/#{node['php-zeromq']['conf_file']}" do
 		owner 'root'
 		group 'root'
